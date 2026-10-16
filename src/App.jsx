@@ -65,7 +65,12 @@ function formatDate(key) {
 }
 
 const todayKey = toKey(new Date());
-
+const initialTasks = [
+  { id: 1, date: todayKey, time: "09:00", title: "Finish React to-do", category: "espresso", done: true },
+  { id: 2, date: todayKey, time: "11:00", title: "Portfolio case study", category: "matcha", done: false },
+  { id: 3, date: todayKey, time: "14:00", title: "Send 3 applications", category: "berry", done: false },
+  { id: 4, date: todayKey, time: "16:30", title: "Python practice", category: "taro", done: false },
+];
 function Ticket({ task, onToggle, onEdit, onDelete }) {
   return (
     <div className="row">
